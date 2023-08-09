@@ -7,7 +7,7 @@ body {
 /* main styles */
 .main {
     display: flex;
-    flex-direction: row-reverse;
+    /* flex-direction: row-reverse; */
     width: 1200px;
     margin: 0 auto;
 }
@@ -40,6 +40,13 @@ body {
     line-height: 55px;
     color: #000000;
     margin-bottom: 25px;
+    display: block;
+}
+
+.about-name-sidebar,
+.about-position-sidebar,
+.about-description-sidebar {
+    display:none;
 }
 
 .about-description {
@@ -170,8 +177,8 @@ body {
     align-items: center; /* Выравнивает изображения по вертикали */
 }
 
-.cert-container img {
-    width: 49%; /* Задайте нужную ширину */
+.cert-container a img {
+    width: 80%; /* Задайте нужную ширину */
     height: auto; /* Высота автоматически рассчитывается, чтобы сохранить пропорции */
 }
 
@@ -278,10 +285,29 @@ body {
         padding: 40px 20px;
     }
     
-    .sidebar {
+    .sidebar {       
         width: 100%;
+        padding: 4px;
+        position: relative; /* Добавьте позиционирование */
+        top: 0; /* Позиционируем вверху страницы */
+        left: 0;
     }
-    
+    .about-sidebar,
+    .about-name-sidebar,
+    .about-position-sidebar,
+    .about-description-sidebar {
+        display:block;
+        width: 100%;
+        color: #FFFFFF;
+    }
+    .about-position-sidebar {
+        font-size: large;
+    }
+    .about-name,
+    .about-position,
+    .about-description {
+        display: none;
+    }
     .photo {
         width: 100%;
         margin-bottom: 20px;
